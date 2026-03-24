@@ -3,20 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>English Trainer</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to the English Trainer for Irregular Verbs!</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Content Section</h2>
-            <p>This section contains information about irregular verbs.</p>
+    <!-- Hauptcontainer -->
+    <div class="app-container">
+        <!-- Header-Bereich -->
+        <header class="app-header">
+            <h1>English Trainer</h1>
+            <h2>Trainiere englische unregelmäßige Verben</h2>
+        </header>
+        
+        <!-- Statistik-Bereich -->
+        <section class="statistics">
+            <h3>Statistik</h3>
+            <div class="stat-cards">
+                <div class="stat-card">
+                    <span class="stat-label">Abgefragt</span>
+                    <span id="stat-queried" class="stat-value">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Richtig</span>
+                    <span id="stat-correct" class="stat-value">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Falsch</span>
+                    <span id="stat-wrong" class="stat-value">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Prozent richtig</span>
+                    <span id="stat-percentage" class="stat-value">0%</span>
+                </div>
+            </div>
+            <button class="reset-button">Statistik & Fortschritt zurücksetzen</button>
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 English Trainer</p>
-    </footer>
+        
+        <!-- Trainingsbereich -->
+        <section class="training">
+            <h3>Verb trainieren</h3>
+            <p class="training-prompt">Deutsches Verb:</p>
+            <div class="training-verb">gehen</div>
+            
+            <div class="training-inputs">
+                <div class="input-group">
+                    <label for="base-form">Base form (Grundform):</label>
+                    <input type="text" id="base-form" class="training-input">
+                </div>
+                <div class="input-group">
+                    <label for="simple-past">Simple past (Vergangenheit):</label>
+                    <input type="text" id="simple-past" class="training-input">
+                </div>
+                <div class="input-group">
+                    <label for="past-participle">Past participle (Partizipform):</label>
+                    <input type="text" id="past-participle" class="training-input">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Aktionsbereich -->
+        <div class="actions">
+            <button class="primary-button">Prüfen</button>
+            <button class="secondary-button">Nächstes Verb</button>
+        </div>
+        
+        <!-- Feedback-Bereich -->
+        <section class="feedback">
+            <h3>Feedback</h3>
+            <div id="feedback-container"></div>
+        </section>
+        
+        <!-- Problemverben-Bereich -->
+        <section class="problematic-verbs">
+            <h3>Häufig falsch beantwortet</h3>
+            <p>Hier werden Verben angezeigt, die du mehrmals falsch beantwortet hast.</p>
+            <div id="problematic-verbs-container"></div>
+        </section>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
